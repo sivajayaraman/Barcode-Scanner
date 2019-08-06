@@ -17,27 +17,37 @@ public class scanner extends AppCompatActivity implements ZXingScannerView.Resul
     public static TextView tv1, tv2;
     ZXingScannerView camScanner;
     public String barcodeValue;
+    pojo_UserDetails details;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scanner);
         tv1 = findViewById(R.id.id_tv_userNo);
         tv2 = findViewById(R.id.id_tv_barcodeValue);
+        try{
+            details = (pojo_UserDetails) getIntent().getSerializableExtra("Object");
+        }
+        catch (Exception e){
+            Log.e("HERE",e.getMessage());
+        }
         camScanner = new ZXingScannerView(this);
         setContentView(camScanner);
-        Intent intent = getIntent();
-        String uniqueId=intent.getStringExtra("UniqueId");
-        tv1.setText(uniqueId);
     }
 
     @Override
     public void handleResult(Result rawResult) {
-        barcodeValue=rawResult.getText();
-        Intent intent = new Intent(this,barCodeScanner.class);
-        String uniqueId=tv1.getText().toString();
-        intent.putExtra("uniqueId",uniqueId);
-        intent.putExtra("barCodeValue",barcodeValue);
-        startActivity(intent);
+        try {
+            barcodeValue=rawResult.getText();
+            details.barCodeValue=this.barcodeValue;
+            Intent intent = new Intent(this,barCodeScanner.class);
+            intent.putExtra("Object",details);
+            startActivity(intent);
+            finish();
+        }
+        catch (Exception e){
+            Log.e("HERE",e.getMessage());
+        }
+
     }
 
     @Override
