@@ -40,11 +40,19 @@ public class barCodeScanner extends AppCompatActivity {
         tv.setText(details.barCodeValue);
     }
     public void registerUser(View view){
-        db = FirebaseDatabase.getInstance().getReference("BarcodeMap");
+        /*
+        db = FirebaseDatabase.getInstance().getReference("RegisteredUsers");
         db.child(details.barCodeValue).setValue(details.uniqueId);
         details.registered=true;
         db = FirebaseDatabase.getInstance().getReference("RegisteredUsers").child(details.uniqueId);
         db.child("registered").setValue(true);
+         */
+        details.registered=true;
+        db = FirebaseDatabase.getInstance().getReference("RegisteredUsers");
+        db.child(details.uniqueId).removeValue();
+        db.child(details.barCodeValue).setValue(details);
+        db = FirebaseDatabase.getInstance().getReference("BarcodeMap");
+        db.child(details.uniqueId).setValue(details.barCodeValue);
         Toast.makeText(this,"REGISTRATION SUCCESSFUL",Toast.LENGTH_LONG).show();
         Intent startIntent = new Intent(this, MainActivity.class);
         startIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

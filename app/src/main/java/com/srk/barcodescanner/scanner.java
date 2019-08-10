@@ -18,6 +18,7 @@ public class scanner extends AppCompatActivity implements ZXingScannerView.Resul
     ZXingScannerView camScanner;
     public String barcodeValue;
     pojo_UserDetails details;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
