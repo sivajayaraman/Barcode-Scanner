@@ -10,13 +10,23 @@
     android:layout_gravity="center"
     tools:context=".MainActivity">
 
-    <EditText
-        android:hint="Enter Unique Id Here"
-        android:id="@+id/uniqueId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <Button
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_margin="35dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Unique ID Here "
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/uniqueId"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/search"
+        style="@style/Widget.MaterialComponents.Button"
         android:text="Search ID"
         android:onClick="searchUser"
         android:layout_width="wrap_content"

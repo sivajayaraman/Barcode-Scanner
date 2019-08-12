@@ -11,12 +11,14 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/TextAppearance.MaterialComponents.Body1"
         android:text="UNIQUE ID : "
         android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/TextAppearance.MaterialComponents.Body1"
         android:id="@+id/uniqueIdDisplay"
         android:textSize="20dp"
         android:layout_width="wrap_content"
@@ -25,12 +27,14 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:text="NAME : "
             android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
         android:id="@+id/name"
         android:textSize="20dp"
         android:layout_width="wrap_content"
@@ -39,13 +43,15 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:text="COLLEGE : "
             android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:id="@+id/college"
             android:textSize="20dp"
             android:layout_width="wrap_content"
@@ -54,13 +60,15 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:text="EMAIL : "
             android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:id="@+id/email"
             android:textSize="20dp"
             android:layout_width="wrap_content"
@@ -69,13 +77,15 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:text="PHONE : "
             android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:id="@+id/phone"
             android:textSize="20dp"
             android:layout_width="wrap_content"
@@ -84,12 +94,14 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:text="FOOD : "
             android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:id="@+id/veg"
             android:textSize="20dp"
             android:layout_width="wrap_content"
@@ -98,12 +110,14 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:text="BARCODE VALUE : "
             android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:id="@+id/barcodeValue"
             android:textSize="20dp"
             android:layout_width="wrap_content"
@@ -112,9 +126,10 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:onClick="registerUser"
             android:text="REGISTER"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

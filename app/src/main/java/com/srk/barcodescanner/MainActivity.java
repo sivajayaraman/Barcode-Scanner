@@ -32,8 +32,7 @@ public class MainActivity extends AppCompatActivity {
             db = FirebaseDatabase.getInstance().getReference("RegisteredUsers");
         }
         //Insert Test Data
-
-        //pojo_UserDetails pjObj = new pojo_UserDetails("ss","ss@gmail.com","sjce","789","777",false);
+        //pojo_UserDetails pjObj = new pojo_UserDetails("sree","sree@gmail.com","sjce","9566357258","4176",false);
         //db.child(pjObj.uniqueId).setValue(pjObj);
         //pojo_UserDetails pjObjTemp = new pojo_UserDetails("pravee","lifeline@gmail.com","velamal","11212","1234",false);
         //db.child(pjObjTemp.uniqueId).setValue(pjObjTemp);
