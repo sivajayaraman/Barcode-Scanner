@@ -32,10 +32,10 @@ public class MainActivity extends AppCompatActivity {
             db = FirebaseDatabase.getInstance().getReference("RegisteredUsers");
         }
         //Insert Test Data
-        //pojo_UserDetails pjObj = new pojo_UserDetails("sree","sree@gmail.com","sjce","9566357258","4176",false);
-        //db.child(pjObj.uniqueId).setValue(pjObj);
-        //pojo_UserDetails pjObjTemp = new pojo_UserDetails("pravee","lifeline@gmail.com","velamal","11212","1234",false);
-        //db.child(pjObjTemp.uniqueId).setValue(pjObjTemp);
+        /*pojo_UserDetails pjObj = new pojo_UserDetails("sree","sree@gmail.com","sjce","9566357258","4176",false);
+        db.child(pjObj.uniqueId).setValue(pjObj);
+        pojo_UserDetails pjObjTemp = new pojo_UserDetails("sathvik","smd@gmail.com","sjce","5484","2002",false);
+        db.child(pjObjTemp.uniqueId).setValue(pjObjTemp);*/
     }
     public boolean checkConnectivity(){
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -76,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
                             } catch (Exception e) {
                                 Log.e("HERE", e.getMessage());
                             }
-
                         } else {
                             DatabaseReference obj = FirebaseDatabase.getInstance().getReference("BarcodeMap");
                             obj.addListenerForSingleValueEvent(new ValueEventListener() {
