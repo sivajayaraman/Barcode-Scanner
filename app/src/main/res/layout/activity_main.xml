@@ -10,25 +10,58 @@
     android:layout_gravity="center"
     tools:context=".MainActivity">
 
-    <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_margin="35dp"
-        android:layout_height="wrap_content"
-        android:hint="Enter Unique ID Here "
-        >
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_margin="35dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Unique ID Here "
+            >
 
-        <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/uniqueId"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/search"
+            android:gravity="center"
+            android:layout_gravity="center"
+            style="@style/Widget.MaterialComponents.Button"
+            android:text="Search ID"
+            android:onClick="searchUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/uniqueId"
-            android:inputType="text"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/search"
-        style="@style/Widget.MaterialComponents.Button"
-        android:text="Search ID"
-        android:onClick="searchUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            android:layout_margin="35dp"
+            android:hint="Enter the BarcodeValue"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapCharacters"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton
+            android:gravity="center"
+            android:layout_gravity="center"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:text="Assign Id"
+            android:onClick="searchUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 </LinearLayout>

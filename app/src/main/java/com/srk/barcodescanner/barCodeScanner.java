@@ -20,39 +20,39 @@ public class barCodeScanner extends AppCompatActivity {
         setContentView(R.layout.activity_bar_code_scanner);
         details = (pojo_UserDetails) getIntent().getSerializableExtra("Object");
         TextView tv = findViewById(R.id.uniqueIdDisplay);
-        tv.setText(details.uniqueId);
+        tv.setText(details.id);
         tv = findViewById(R.id.name);
-        tv.setText(details.userName);
+        tv.setText(details.u);
         tv = findViewById(R.id.phone);
-        tv.setText(details.phoneNumber);
+        tv.setText(details.p);
         tv = findViewById(R.id.email);
-        tv.setText(details.emailId);
+        tv.setText(details.e);
         tv = findViewById(R.id.college);
-        tv.setText(details.collegeName);
+        tv.setText(details.c);
         tv = findViewById(R.id.veg);
-        if(details.veg) {
+        if(details.v) {
             tv.setText("VEG");
         }
         else {
             tv.setText("NON VEG");
         }
         tv = findViewById(R.id.barcodeValue);
-        tv.setText(details.barCodeValue);
+        tv.setText(details.b);
     }
     public void registerUser(View view){
         /*
         db = FirebaseDatabase.getInstance().getReference("RegisteredUsers");
-        db.child(details.barCodeValue).setValue(details.uniqueId);
-        details.registered=true;
-        db = FirebaseDatabase.getInstance().getReference("RegisteredUsers").child(details.uniqueId);
-        db.child("registered").setValue(true);
+        db.child(details.b).setValue(details.id);
+        details.r=true;
+        db = FirebaseDatabase.getInstance().getReference("RegisteredUsers").child(details.id);
+        db.child("r").setValue(true);
          */
-        details.registered=true;
+        details.r=true;
         db = FirebaseDatabase.getInstance().getReference("RegisteredUsers");
-        db.child(details.uniqueId).removeValue();
-        db.child(details.barCodeValue).setValue(details);
+        db.child(details.id).removeValue();
+        db.child(details.b).setValue(details);
         db = FirebaseDatabase.getInstance().getReference("BarcodeMap");
-        db.child(details.uniqueId).setValue(details.barCodeValue);
+        db.child(details.id).setValue(details.b);
         Toast.makeText(this,"REGISTRATION SUCCESSFUL",Toast.LENGTH_LONG).show();
         Intent startIntent = new Intent(this, MainActivity.class);
         startIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

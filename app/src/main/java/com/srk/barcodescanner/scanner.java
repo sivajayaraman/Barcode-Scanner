@@ -39,7 +39,7 @@ public class scanner extends AppCompatActivity implements ZXingScannerView.Resul
     public void handleResult(Result rawResult) {
         try {
             barcodeValue=rawResult.getText();
-            details.barCodeValue=this.barcodeValue;
+            details.b=this.barcodeValue;
             Intent intent = new Intent(this,barCodeScanner.class);
             intent.putExtra("Object",details);
             startActivity(intent);

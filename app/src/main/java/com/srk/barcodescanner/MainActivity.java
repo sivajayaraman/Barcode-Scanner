@@ -32,10 +32,10 @@ public class MainActivity extends AppCompatActivity {
             db = FirebaseDatabase.getInstance().getReference("RegisteredUsers");
         }
         //Insert Test Data
-        /*pojo_UserDetails pjObj = new pojo_UserDetails("sree","sree@gmail.com","sjce","9566357258","4176",false);
-        db.child(pjObj.uniqueId).setValue(pjObj);
-        pojo_UserDetails pjObjTemp = new pojo_UserDetails("sathvik","smd@gmail.com","sjce","5484","2002",false);
-        db.child(pjObjTemp.uniqueId).setValue(pjObjTemp);*/
+        /*pojo_UserDetails pjObj = new pojo_UserDetails("srk","srk0000@gmail.com","sjce","9443499270","1208","MALE",true);
+        db.child(pjObj.id).setValue(pjObj);
+        pojo_UserDetails pjObjTemp = new pojo_UserDetails("viver jio","monster@gmail.com","sjce","7373728393","2399","MALE",false);
+        db.child(pjObjTemp.id).setValue(pjObjTemp);*/
     }
     public boolean checkConnectivity(){
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -63,18 +63,18 @@ public class MainActivity extends AppCompatActivity {
                                 pojo_UserDetails temp = new pojo_UserDetails();
                                 for (DataSnapshot child : dataSnapshot.getChildren()) {
                                     temp = child.getValue(pojo_UserDetails.class);
-                                    if (temp.uniqueId.equals(unique)) {
+                                    if (temp.id.equals(unique)) {
                                         break;
                                     }
                                 }
-                                if (temp.uniqueId.equals(unique)) {
+                                if (temp.id.equals(unique)) {
                                     Intent intent = new Intent(getApplicationContext(), scanner.class);
                                     intent.putExtra("Object", temp);
                                     startActivity(intent);
                                     finish();
                                 }
                             } catch (Exception e) {
-                                Log.e("HERE", e.getMessage());
+                                Log.e("HERE1", e.getMessage());
                             }
                         } else {
                             DatabaseReference obj = FirebaseDatabase.getInstance().getReference("BarcodeMap");
