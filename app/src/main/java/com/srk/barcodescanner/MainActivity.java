@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                                     }
                                 }
                                 if (temp.id.equals(unique)) {
-                                    Intent intent = new Intent(getApplicationContext(), scanner.class);
+                                    Intent intent = new Intent(getApplicationContext(), Selection.class);
                                     intent.putExtra("Object", temp);
                                     startActivity(intent);
                                     finish();

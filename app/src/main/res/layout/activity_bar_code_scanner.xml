@@ -13,7 +13,7 @@
         android:layout_height="wrap_content">
     <com.google.android.material.textview.MaterialTextView
         style="@style/TextAppearance.MaterialComponents.Body1"
-        android:text="UNIQUE ID : "
+        android:text="CRYPTRIX ID : "
         android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -70,6 +70,40 @@
         <com.google.android.material.textview.MaterialTextView
             style="@style/TextAppearance.MaterialComponents.Body1"
             android:id="@+id/email"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:text="GENDER : "
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:id="@+id/gender"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:text="REGISTER NO. : "
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:id="@+id/reg"
             android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
